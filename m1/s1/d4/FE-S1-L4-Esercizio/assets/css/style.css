@@ -1,0 +1,42 @@
+/* IMPOSTAZIONI GENERALI */
+
+
+body{background-image: url(../img/sfondo.png)}
+
+/* HEADER */
+header{max-width: 500px;
+    background-size: 500px;
+    background-color: rgb(red, green, rgb(40, 230, 255));
+    background: linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
+border-radius: 15px;
+margin: auto;
+text-align: center;
+color: white;}
+
+
+#logo{border-left: auto;
+border-right: auto;}
+/* MAIN */
+main{max-width: 500px;
+    background-size: 500px;
+    background-color: white;  
+    border-radius: 15px;
+    margin:auto; 
+    text-align: center;
+
+}
+/* ELEMENTI NEL MAIN - ARTICLE */
+#scritta1{color: gray;text-align: center
+    border-left: auto;
+    border-right:auto}
+
+/* TABELLE */
+table{border-bottom: solid;"border:1px;margin-left:auto;margin-right:auto;"
+border-bottom: blue;
+text-align: center;}
+#riga1{color: white;background-color: blue;}
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
