@@ -1,7 +1,8 @@
 /* IMPOSTAZIONI GENERALI */
+*{box si}
 
-
-body{background-image: url(../img/sfondo.png)}
+body{background-image: url(../img/sfondo.png)
+}
 
 /* HEADER */
 header{max-width: 500px;
