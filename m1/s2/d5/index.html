@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calcolatrice V3</title>
+  <link href="css/style.css" rel="stylesheet"><!--collego css nella head-->
+  <script src="js/funzioni.js" defer></script> <!--collego js nell'head mettendo defer per far caricare tuuta la pagina-->
+</head>
+<body>
+  <div class="corpo-calcolatrice"><!--classe CSS per tutto il corpo della calcolatrice-->
+    <div class="output"><!--classe per ciò che viene visualizzato nello schermo-->
+      <!--creo dei data-types per non mischiare le classi CSS con quelle JS-->
+      <div data-previous-operand class="operazione-precedente"></div><!--ciò che viene visualizzato in alto nello schermo-->
+      <div data-current-operand class="operazione-corrente"></div><!--è l'operazione attuale,in basso nello schermo-->
+    </div>
+    <button data-all-clear class="tastogrande">AC</button><!--classe per i tasti grandi e data-types diversi a seconda della funzione dei tasti-->
+    <button data-delete>DEL</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="tastogrande  ">=</button><!--l'unico altro tasto doppio -->
+  </div>
+</body>
+</html>

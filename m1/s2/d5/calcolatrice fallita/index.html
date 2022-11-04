@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progettocalcolatrice</title>
+    <link rel="stylesheet" href="css/reset.css"><!--foglio di reset di stile-->
+    <link rel="stylesheet" href="css/style.css"><!--foglio dello style css-->
+</head>
+
+<body> <script src="js/funzioni.js" defer>
+
+</script>
+    <div class="corpocalcolatrice"><!--classe per l'intera calcolatrice-->
+        <div class="output"><!--classe per lo "schermo"-->
+                <div data-previous-operand class="previous-operand">23456</div><!--classe per l'operazione precendete-->
+                <div  data-courrent-operand class="courrent-operand">65432</div><!--classe per l'operazione corrente-->
+       </div>
+<button data-all-clear  data-class="span-two">AC</button><!--1bottone grande-->
+
+<button data-delete>DEL</button>
+
+<button data-operation>/</button>
+
+<button data-number>1</button>
+<button data-number>2</button>
+<button data-number>3</button>
+<button data-operation>*</button>
+<button data-number>4</button>
+<button data-number>5</button>
+<button data-number>6</button>    
+<button data-operation>+</button>
+<button data-number>7</button>
+<button data-number>8</button>
+<button data-number>9</button>
+<button data-operation>-</button>
+<button data->.</button>
+<button data-number>0</button>
+<button data-equals class="span-two">=</button><!--2bottone grande-->
+
+
+</div>
+</body>
+</html>

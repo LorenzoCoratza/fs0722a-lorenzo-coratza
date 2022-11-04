@@ -1,0 +1,62 @@
+/*applico un font comune utilizzando anche ::before and ::after per far si che nello "schermo non cambi font l'operazione rpecedente"*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  /*imposto uno sfondo con sfumatura e rendo la page pulita*/
+  body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #cc180b, #303130);
+  }
+  /*faccio centrare automaticamente sia la calcolatrice che gli elementi all'internno e creo la struttura a colonne*/
+  .corpo-calcolatrice {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    border-radius: 15px;
+  }
+  /*cambio il cursore quando si passa sui tasti e creo lo stile dedi bottoni*/
+  .corpo-calcolatrice > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #c91b0ed3;
+    outline: none;
+    background-color: rgba(46, 44, 44, 0.75);
+    border-radius: 15px;
+  }
+  /* creo un effeto quando si passa sui bottoni*/
+  .corpo-calcolatrice > button:hover {
+    background-color: rgba(46, 44, 44, .9);
+  }
+  /*creo i tasti più grandi*/
+  .tastogrande {
+    grid-column: span 2;
+  }
+  /*creo lo schermo,lo faccio nero e faccio apparire le cifre in basso a destra*/
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 15px;
+  }
+  /*creo una differenzioazione tra l'operazione precendete in alto sullo schermo e quella in basso*/
+  .output .operazione-precedente {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  /*evidednzio l'operazione corrente con un po'di opacity su quella precedente*/
+  .output .operazione-corrente {
+    color: white;
+    font-size: 2.5rem;
+  }

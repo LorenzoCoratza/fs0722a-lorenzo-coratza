@@ -106,7 +106,6 @@ Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
 
 let characters =[];
-console.log(characters);
 
 /* ESERCIZIO 2
 Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name". 
@@ -115,6 +114,7 @@ Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO",
 */
 
 for(let i in starWarsCharacters){
+  
   characters[i] = starWarsCharacters[i].name;
 }
 
@@ -122,36 +122,31 @@ console.log(characters);
 
 
 
-/*for(const name in starWarsCharacters){
-  let characters = starWarsCharacters.name;
-}+/
-
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 
-femaleCharacters=[
-  {name: "Leia Organa",
+femaleCharacters={[
+  name: "Leia Organa",
   hair_color:"brown",
   eye_color:"brown",
 
   }
-]
+
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
 */
 
-let eyecolor ={
+let eyecolor ={ 
 blue[],
 yellow[],
 brown[],
 red[],
-blue-gray[],
-} 
-
+blue-gray[] 
+}
 /* ESERCIZIO 5
   Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato
   Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
@@ -160,9 +155,16 @@ blue-gray[],
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
   */
+let a = 0 , massatot = 0;
+while(a<10){
+  massatot=number
+}
 
 
-  
+
+
+
+
 /* ESERCIZIO 7
 
 Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
