@@ -10,6 +10,16 @@
     margin: 0;
     background: linear-gradient(to right, #cc180b, #303130);
   }
+  /**/
+ h1 , h3{
+  text-align: center;
+  padding-left: 40%;
+  padding-right: 40%;
+ } 
+  
+  
+  
+  
   /*faccio centrare automaticamente sia la calcolatrice che gli elementi all'internno e creo la struttura a colonne*/
   .corpo-calcolatrice {
     display: grid;

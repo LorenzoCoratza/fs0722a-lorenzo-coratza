@@ -1,4 +1,4 @@
-/*CREAZIONE CLASSE CALCOLATRICE PER LO SCHERMO*/
+////7/////******CREAZIONE CLASSE CALCOLATRICE PER LO SCHERMO******////////////////////
 class Calculator 
 {/*dentro questa classe metterò tutte le funzioni legate ai singoli tasti per far si che funzionino */
     constructor(previousOperandTextElement, currentOperandTextElement) 
@@ -22,36 +22,36 @@ class Calculator
     /* x tasto DEL*/
     delete() 
     {
-      this.currentOperand = this.currentOperand.toString().slice(0, -1)
+      this.currentOperand = this.currentOperand.toString().slice(0, -1)/* prima converte in stringa e poi lo taglia e prende solo l'ultimo valore per cancellarne solo 1 */  
     }
   
     /* creo la funzione per visualizzare e poter operare con i numeri sullo schermo*/
     appendNumber(number) 
     { /* glielo ho cambiato di nuovo per farlo essere un numero */
-      if (number === '.' && this.currentOperand.includes('.')) return
-      this.currentOperand = this.currentOperand.toString() + number.toString()
+      if (number === '.' && this.currentOperand.includes('.')) return/*per evitare che ci possano essere + . in una strigna */
+      this.currentOperand = this.currentOperand.toString() + number.toString()/*prima converto il valore in stringa per far vedere il calcolo e aggiungo il numero però sempre sotto forma di stringa */
     }
   
     chooseOperation(operation) 
     {
-      if (this.currentOperand === '') return
-      if (this.previousOperand !== '') {
+      if (this.currentOperand === '') return/*  per evitare che le operazioni facciano partire il clear*/
+      if (this.previousOperand !== '') {/*per far partire il calcolo non direttamente risolto nel previous operando ma farlo comparire nel current operand  */
         this.compute()
       }
-      this.operation = operation
-      this.previousOperand = this.currentOperand
-      this.currentOperand = ''
+      this.operation = operation /*prima settiamo l'operation per permettergli poi di risolverle */
+      this.previousOperand = this.currentOperand/*abbiamo smesso con l'operazione passata quindi vogliamo che venga comunque passata in quella auova per poterla usare*/
+      this.currentOperand = ''/* per pulire lo spazio della calcolatrice all'operazione attuale*/
     }
-  
+    /* IMPLEMENTO COMPUTE */ 
     /*prende i valori dalla calcolatrice e fa effetivamente il calcolo,permette di calcolare mettendo in comuniccazione l'operazione precedente  a quella corrente */
-    compute() 
+    compute() /* FUNZIONE DI CALCOLO */
     {
-      let computation
-      const prev = parseFloat(this.previousOperand)/*converto in costante il valore visualiizato nell'operazione precedente */
-      const current = parseFloat(this.currentOperand)/*e converto in costante per compute anche quello dell'operazione corrente */
-      if (isNaN(prev) || isNaN(current)) return
-      switch (this.operation) {
-        case '+':
+      let computation/*prima creo la variabile  */
+      const prev = parseFloat(this.previousOperand)/*converto la stringa in numero prima dell'operazione precedente*/
+      const current = parseFloat(this.currentOperand)/*poi converto anche l'operazione attuale*/
+      if (isNaN(prev) || isNaN(current)) return/* per cancellare la funzione di callcolo se non ci sono calcoli da fare */
+      switch (this.operation) {/* per usare più if ma sullo stesso oggetto, */
+        case '+':/* aggiungo i case su tutte le operazioni e metto i break per farli uno alla volta */
           computation = prev + current
           break
         case '-':
@@ -63,30 +63,30 @@ class Calculator
         case '÷':
           computation = prev / current
           break
-        default:
-          return
+        default: return/* se nessuno di quei casi viene eseguito voglio un return perchè non essendoci simboli,non vogliamo operazioni */
       }
-      this.currentOperand = computation
-      this.operation = undefined
-      this.previousOperand = ''
+      this.currentOperand = computation/* per rendere il currentOperand il risultato del compute */
+      this.operation = undefined/* per lasciare l oschermo vuoto ogni volta */
+      this.previousOperand = ''/* sia sopra che sotto lo lasciamo vuoto così */
     }
   
+    /* funzione per prendere i numeri e convertirli in stringa*/
     getDisplayNumber(number) 
     {
-      const stringNumber = number.toString()
-      const integerDigits = parseFloat(stringNumber.split('.')[0])
-      const decimalDigits = stringNumber.split('.')[1]
+      const stringNumber = number.toString()/* lo convertiamo a stringa per poter splittare i decimali e prenderne solo alcuni*/
+      const integerDigits = parseFloat(stringNumber.split('.')[0])/*prim lo rirendiamo numero e poi lo trasformiamo in array */
+      const decimalDigits = stringNumber.split('.')[1]/*qua facciamo la stessa cosa ma senza parsefloat perchè non ci serve un numero e prendendo solo la seconda parte perchè è la prima del decimale */
       let integerDisplay
-      if (isNaN(integerDigits)) 
+      if (isNaN(integerDigits)) /*metto un if se non ce niente sullo schermo  */
       {
         integerDisplay = ''
       } else 
       {
-        integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+        integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })/*se non ho decimali,non li voglio e convertire tutto in numeri*/
       }
       if (decimalDigits != null) 
       {
-        return `${integerDisplay}.${decimalDigits}`
+        return `${integerDisplay}.${decimalDigits}`/* se ho i decimali*/
       } else {
         return integerDisplay
       }
@@ -95,15 +95,15 @@ class Calculator
     /* funzione che permette l'update del display sia se dentro ci sono numeri che se non c'è nulla come nel caso di AC*/
     updateDisplay() 
     {
-      this.currentOperandTextElement.innerText =
+      this.currentOperandTextElement.innerText =/* implementiamo la funzione per fari restare i numeri e passarli da operazione attuale a successiva senza cancellarli*/
         this.getDisplayNumber(this.currentOperand)
       if (this.operation != null) 
       {
-        this.previousOperandTextElement.innerText =
+        this.previousOperandTextElement.innerText =/*così avremo in altro l'ultima cifra digitata e l'operazione */
           `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
       } else 
       {
-        this.previousOperandTextElement.innerText = ''
+        this.previousOperandTextElement.innerText = ''/*quando sono alla prima operazione */
       }
     }
   }
