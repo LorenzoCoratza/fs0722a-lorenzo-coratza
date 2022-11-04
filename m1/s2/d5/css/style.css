@@ -8,17 +8,38 @@
   body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #cc180b, #303130);
+    background: linear-gradient(to right, #993406, #303130);
   }
   /**/
- h1 , h3{
-  text-align: center;
-  padding-left: 40%;
-  padding-right: 40%;
- } 
+ #badge{
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+ color: rgb(240, 231, 231);
+  background-color: rgb(14, 13, 13);
+ border-bottom-left-radius: 15PX;
+ border-bottom-right-radius: 15px;
+ padding: 1rem;
+ 
+ }
+ 
+ img{
+  max-width: 80px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+ }
   
+ #bottom{
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  color: rgb(240, 231, 231);
+  background-color: rgb(14, 13, 13);
+  color: rgb(240, 231, 231);
+  background-color: rgb(14, 13, 13);
+  min-height: 3rem;
+ }
   
-  
+ 
   
   /*faccio centrare automaticamente sia la calcolatrice che gli elementi all'internno e creo la struttura a colonne*/
   .corpo-calcolatrice {

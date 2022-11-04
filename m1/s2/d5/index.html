@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calcolatrice V3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"><!--collego css nella head-->
   <script src="js/funzioni.js" defer></script> <!--collego js nell'head mettendo defer per far caricare tuuta la pagina-->
 </head>
 <body>
-  <h1>CALCOLATRICE SEMPLICE</h1>
-  <h3>(ma con schermo funzionante)</h3>
- <h3>di Lorenzo Coratza</h3>
-  
+ 
+  <div id="badge">
+    <h1>CALCOLATRICE SEMPLICE</h1>
+  <p>(ma con schermo funzionante) di Lorenzo Coratza</p>
+  <img  id = "logo" src="css/image_processing20200508-12971-cktjip.png" alt="logo">
+
+</div>
 
   <div class="corpo-calcolatrice"><!--classe CSS per tutto il corpo della calcolatrice-->
     <div class="output"><!--classe per ciò che viene visualizzato nello schermo-->
@@ -39,5 +45,8 @@
     <button data-number>0</button>
     <button data-equals class="tastogrande  ">=</button><!--l'unico altro tasto doppio -->
   </div>
+  <div id="bottom">
+    <p>©copyright by Lorenzo Coratza</p>
+    
 </body>
 </html>
