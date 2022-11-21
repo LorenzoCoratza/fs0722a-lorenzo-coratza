@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <!--la proprietà initial scale imposta il fattore di zoom iniziale|la rpoprietà user-scalable aggiunta permette di consentire o meno all'utente di ridimensionare-zoomare la pagina entro certi valori con minimum-scale e maximum-scale,l'utente può zoomare-->
+    <title>Media queries</title>
+    <style type="text/css">
+        body{ background: red;}/*mobile first*/
+        @media screen and (min-width: 480px;){  /*smartphone landscape*/
+            body{background: yellow;}
+        }
+        @media screen and (min-width: 768px){  /*tablet*/
+            body{background: green;}
+        }
+        @media screen and (min-width: 1024px){  /*laptop*/
+            body{background: blue;}
+        } 
+        @media screen and (min-width: 1200px){  /*desktop*/
+            body{background: grey;}
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
