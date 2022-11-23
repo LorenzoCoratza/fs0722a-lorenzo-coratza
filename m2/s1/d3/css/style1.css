@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+
+
+
+.container{
+    width: 80vh;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+ img{
+    display: flex;
+    height: 70%;
+    max-width: 100%;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15% ;
+
+}
+
+.text{
+    display: flex;
+    background-color: rgba(228, 214, 0.5);
+opacity: 60%;
+color: rgb(61, 52, 52);
+}
+
+#sx{
+    flex-grow: 4;
+    flex-wrap: wrap;
+}
+
+#sx >* {
+    flex: 1 1 100%;
+}
+
+#sx h1{
+    height: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 40px;
+}
+
+#sx p{
+    height: 50%;
+    font-size: 1rem;
+}
+
+#price{
+    flex-grow: 1;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 70px 100px;
+
+}
