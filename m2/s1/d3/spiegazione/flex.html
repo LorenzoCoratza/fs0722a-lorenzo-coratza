@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleXXX</title>
+    <style>
+        .main-nav{
+            display: flex;
+            background: orangered;
+            color: white;
+            border-radius: 3px;
+            padding: 1em;
+            font-family: sans-serif;
+        }
+        .main-nav > ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;   /*contenitore dei tag <li>*/
+            flex: 3;   /* è item di .main-nav e gli assegno un valore di flex-grow*/
+        }
+        .main-nav li{
+            margin-right: 1em;
+        }
+        .main-nav form{
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        .main-nav input{
+            flex:1 ;
+        }
+        .main-nav button{
+            background-color: white;
+            border: 0;
+            border-radius: 1em;
+            color: orangered;
+            padding: 0 1em;
+            margin-left: 0.3em;
+        }
+        @media screen and (max-width: 575px){
+            .main-nav{
+                flex-direction: column;
+            }
+            .main-nav ul{
+                flex-direction: column;
+                margin-bottom: 1em;
+            }
+        }
+
+    </style> 
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li>Logo</li>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Service</li>
+        </ul>
+        <form>
+            <input type="search" placeholder="search">
+            <button>Go</button>
+        </form>
+    </nav>
+</body>
+</html>
