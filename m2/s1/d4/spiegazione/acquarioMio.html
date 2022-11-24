@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistole nella fendi</title>
+    <style>
+#container{
+    background-color: aquamarine;
+padding: 30px 60px;
+height: 800px;
+align-items: center;
+}
+#acquario{
+   background-image: url(images/fondo.jpg);
+   height: 600px;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#pesce1{
+animation-name: animazione_pesce;
+animation-duration: 10s;
+animation-delay: 0s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+#pesce2{
+animation-name: animazione_pesce;
+animation-duration: 15s;
+animation-delay: 1s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+#pesce3{
+animation-name: animazione_pesce;
+animation-duration: 20s;
+animation-delay: 2s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+#pesce4{
+animation-name: animazione_pesce;
+animation-duration: 30s;
+animation-delay: 3s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+
+
+@-webkit-keyframes 'animazione_pesce' {
+    0%{ transform : translate(0,0);}
+    100%{ transform:translate(400px,0) rotate(90deg); border}
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="acquario">
+          
+        <img id="pesce1" src="images/cardinale.gif" alt="pesciolone">
+        <img id="pesce2" src="images/cardinale2.gif" alt="pesciolone">
+        <img id="pesce3" src="images/pesce-arciere.gif" alt="pesciolone">
+        <img id="pesce4" src="images/pesce-arciere2.gif" alt="pesciolone">
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Acquario 01</title>
+<style>
+html, body{ margin:0; padding:0;}
+#contenitore{ width:960px; height:600px; border:1px solid #000; position:absolute; left:50%; margin-left:-480px;}
+#sx{ width:178px; height:600px; background-color:#D0F3FB; position:absolute; left:0; z-index:100;}
+#dx{ width:178px; height:600px; background-color:#D0F3FB; position:absolute; right:0; z-index:100;}
+#bottom{ width:960px; height:98px; background-color:#D0F3FB; position:absolute; bottom:0; z-index:100;}
+#top{ width:960px; height:98px; background-color:#D0F3FB; position:absolute; top:0; z-index:100;}
+#corallo{ width:300px; height:200px; position:absolute; bottom:100px; left:160px; z-index:100;}
+#corallo2{ width:300px; height:200px; position:absolute; bottom:100px; left:400px; z-index:100;}
+#vasca{ width:600px; height:400px; margin:100px auto; background-image:url(images/fondo.jpg); box-shadow:5px 5px 5px 5px #666666; border-radius:5px;}
+#pesce_01{ width:60px; height:60px; position:absolute; top:270px; right:50px;}
+#pesce_02{ width:60px; height:60px; position:absolute; top:260px; left:40px;}
+#pesce_03{ width:60px; height:60px; position:absolute; top:320px; right:50px;}
+#pesce_04{ width:60px; height:60px; position:absolute; top:200px; left:50px;}
+#pesce_05{ width:60px; height:60px; position:absolute; top:290px; right:45px;}
+#pesce_06{ width:60px; height:60px; position:absolute; top:240px; left:45px;}
+#pesce_07{ width:60px; height:60px; position:absolute; top:300px; right:55px;}
+#pesce_08{ width:60px; height:60px; position:absolute; top:220px; left:55px;}
+@keyframes animazione_pesce_01{
+from{transform:translate(0,0);}
+20%{transform:translate(-140px,-90px) rotate(10deg) scale(1,1.6);}
+40%{transform:translate(-280px,-70px) rotate(-1deg);}
+60%{transform:translate(-420px,-105px) rotate(-10deg) scale(1,1.6);}
+80%{transform:translate(-560px,-65px) scale(1,1.6);}
+to{transform:translate(-750px,50px);}
+}
+@keyframes animazione_pesce_02{
+from{transform:translate(0,0);}
+20%{transform:translate(110px,-10px) rotate(4deg);}
+40%{transform:translate(240px,20px)  scale(1,1.8);}
+60%{transform:translate(380px,25px) rotate(-3deg);}
+80%{transform:translate(565px,-5px) rotate(5deg) scale(1,1.6);}
+to{transform:translate(770px, 0px);}
+}
+
+@keyframes animazione_pesce_03{
+from{-webkit-transform:translate(0,0);}
+20%{-webkit-transform:translate(-140px,30px) rotate(4deg);}
+40%{-webkit-transform:translate(-280px,45px) rotate(-6deg) scale(1,1.6);}
+60%{-webkit-transform:translate(-420px,55px) rotate(1deg);}
+80%{-webkit-transform:translate(-560px,42px) rotate(6deg) scale(1,1.6);}
+to{-webkit-transform:translate(-750px,21px);}
+}
+@keyframes animazione_pesce_04{
+from{transform:translate(0,0);}
+20%{transform:translate(120px,-10px) rotate(5deg);}
+40%{transform:translate(250px,20px)  scale(1,1.6);}
+60%{transform:translate(400px,25px) rotate(0deg);}
+80%{transform:translate(575px,-5px) rotate(7deg) scale(1,1.6);}
+to{-webkit-transform:translate(770px, 0px);}
+}
+@keyframes animazione_pesce_05{
+from{transform:translate(0,0);}
+20%{transform:translate(-140px,-90px) rotate(10deg) scale(1,1.6);}
+40%{transform:translate(-280px,-70px) rotate(-1deg);}
+60%{transform:translate(-420px,-105px) rotate(-10deg) scale(1,1.6);}
+80%{transform:translate(-560px,-65px) scale(1,1.6);}
+to{transform:translate(-750px,50px);}
+}
+@keyframes animazione_pesce_06{
+from{transform:translate(0,0);}
+20%{transform:translate(110px,-10px) rotate(4deg);}
+40%{transform:translate(240px,20px)  scale(1,1.8);}
+60%{transform:translate(380px,25px) rotate(-3deg);}
+80%{transform:translate(565px,-5px) rotate(5deg) scale(1,1.6);}
+to{transform:translate(770px, 0px);}
+}
+
+@keyframes animazione_pesce_07{
+from{transform:translate(0,0);}
+20%{transform:translate(-140px,30px) rotate(4deg);}
+40%{transform:translate(-280px,45px) rotate(-6deg) scale(1,1.6);}
+60%{transform:translate(-420px,55px) rotate(1deg);}
+80%{transform:translate(-560px,42px) rotate(6deg) scale(1,1.6);}
+to{transform:translate(-750px,21px);}
+}
+@keyframes animazione_pesce_08{
+from{transform:translate(0,0);}
+20%{transform:translate(120px,-10px) rotate(5deg);}
+40%{transform:translate(250px,20px)  scale(1,1.6);}
+60%{transform:translate(400px,25px) rotate(0deg);}
+80%{transform:translate(575px,-5px) rotate(7deg) scale(1,1.6);}
+to{transform:translate(770px, 0px);}
+}
+#pesce_01{ 
+animation-name:animazione_pesce_01;
+animation-duration:20s;
+animation-delay:5s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_02{ 
+animation-name:animazione_pesce_02;
+animation-duration:14s;
+animation-delay:3s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_03{ 
+animation-name:animazione_pesce_03;
+animation-duration:17s;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_04{ 
+animation-name:animazione_pesce_04;
+animation-duration:25s;
+animation-delay:8s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_05{ 
+animation-name:animazione_pesce_05;
+animation-duration:20s;
+animation-delay:1s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_06{ 
+animation-name:animazione_pesce_06;
+animation-duration:14s;
+animation-delay:4s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_07{ 
+animation-name:animazione_pesce_07;
+animation-duration:17s;
+animation-delay:7s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+#pesce_08{ 
+animation-name:animazione_pesce_08;
+animation-duration:25s;
+animation-delay:6s;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+
+</style>
+</head>
+<body>
+<div id="contenitore">
+    <div id="sx"></div>
+    <div id="dx"></div>
+    <div id="bottom"></div>
+    <div id="top"></div>
+    <div id="vasca"></div>
+    <div id="corallo"><img src="images/corallo.gif"></div>
+    <div id="corallo2"><img src="images/corallo2.gif"></div>
+    <div id="pesce_01"><img src="images/pesce-arciere.gif"></div>
+    <div id="pesce_02"><img src="images/pesce-arciere2.gif"></div>
+    <div id="pesce_03"><img src="images/pygoplites-diacanthus.gif"></div>
+    <div id="pesce_04"><img src="images/pygoplites-diacanthus2.gif"></div>
+    <div id="pesce_05"><img src="images/cardinale2.gif"></div>
+    <div id="pesce_06"><img src="images/cardinale.gif"></div>
+    <div id="pesce_07"><img src="images/pesci_tropicali_442.gif"></div>
+    <div id="pesce_08"><img src="images/pesci_tropicali_44.gif"></div>
+</div>
+</body>
+</html>
