@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* memorizzo un valore */
+.btn {
+  display: inline;
+  padding: 20px;
+  color: #4f4f4f;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+body {
+  width: 90%;
+  color: #4f4f4f;
+}
+
+.container {
+  width: 90%;
+  padding: 20px; /* assegno il valore alla proprietà
+di un selettore */
+}/*# sourceMappingURL=main.css.map */

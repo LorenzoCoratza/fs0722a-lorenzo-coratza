@@ -1,0 +1,58 @@
+.bottoni {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.bottoni #btn1 {
+  height: 4rem;
+  background-color: blue;
+  color: white;
+  width: 180px;
+  font-size: 1.2rem;
+}
+.bottoni #btn2 {
+  height: 4rem;
+  background-color: orangered;
+  color: white;
+  width: 100px; 
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: purple;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .sx {
+  font-weight: bold;
+  font-size: 30px;
+}
+header .dx ul {
+  display: inline-flex;
+  list-style: none;
+}
+header .dx ul li {
+  padding: 10px;
+}
+
+main {
+  display: inline-flex;
+}
+main .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .text h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+main .text p {
+  margin-top: 10px;
+  padding-right: 10px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    justify-content: space-between;
+  .sx{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .dx { font-weight: bold;
+    ul{display: inline-flex;
+        list-style: none;
+        
+    li{padding: 10px}
+      }
+    }
+}

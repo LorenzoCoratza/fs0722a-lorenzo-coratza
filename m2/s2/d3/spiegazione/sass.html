@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistole nella LV</title>
+    <link rel="stylesheet" href="scss/app.css">
+</head>
+<body class="firefox">
+    <nav>
+        <ul>
+            <li>primo</li>
+            <li>secondo</li>
+            <li>terzo</li>
+        </ul>
+    </nav>
+    <!--Selettori Nidificati-->
+    <div id="main">
+        <p>paragrafo di main</p>
+        <span>span di main</span>
+        <a href="#">link di main</a>
+    </div>
+<!--Selettori Ancora più Nidificati-->
+    <div id="main2">
+        <div>
+            testossss
+            <p class="red">testo con <a href="#">linkk</a></p>
+        </div>
+    </div>
+
+<!-- Nesting -->
+    <div class="esempio">
+        <h1 class="titolo">Titolo Child</h1>
+        <p class="para">Paragrafo Child</p>
+        <button class="bottone">Clicca Qui</button>
+    </div>
+
+    <!--Keyword & (and)-->
+    <a href="#" id="pippo">link pippo</a>
+    <div class="esempio2">
+        <h1>Keyword &</h1>
+        <button class="bottone">Prova</button>
+    </div>
+
+    <div id="main3">
+        <p>testo main3</p>
+        <div id="main3-sidebar">
+            <p>testo contenuto in <code>main3-sidebar</code> </p>
+        </div>
+    </div>
+
+
+    <!--Proprità Nidificate (propr.css con prefisso comune)-->
+    <div id="main4">
+        <p>testo con proprità nidificate</p>
+    </div>
+</body>
+</html>
