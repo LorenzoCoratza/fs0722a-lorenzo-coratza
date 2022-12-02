@@ -1,0 +1,25 @@
+#btn1:hover{
+    color: $bg-color;
+    background: white;
+    box-shadow: 0 0 1px black;  
+    scale: 1.1;      
+}
+
+header{
+    #dx{
+        li:hover{
+            color: $hedr-color;
+            background: black;
+            box-shadow: 0 0 1px black; 
+            scale: 1.5;     
+        }
+    }
+}
+
+#brands{
+    div{
+        img:hover{
+        box-shadow: 0 0 5px black; 
+        scale: 1.2;     
+    }}
+}

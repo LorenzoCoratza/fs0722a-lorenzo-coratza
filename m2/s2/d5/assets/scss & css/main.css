@@ -1,0 +1,67 @@
+#btn1:hover {
+  color: #6c1af1;
+  background: white;
+  box-shadow: 0 0 1px black;
+  scale: 1.1;
+}
+
+header #dx li:hover {
+  color: red;
+  background: black;
+  box-shadow: 0 0 1px black;
+  scale: 1.5;
+}
+
+#brands div img:hover {
+  box-shadow: 0 0 5px black;
+  scale: 1.2;
+}
+
+header {
+  background-color: #6c1af1;
+}
+header #servizi {
+  color: red;
+}
+header #contatti {
+  color: red;
+}
+header svg {
+  color: red;
+}
+
+main p {
+  font-size: 1.3rem;
+}
+main #btn1 {
+  background-color: #6c1af1;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+main #btn1:hover {
+  color: #6c1af1;
+  background: white;
+  box-shadow: 0 0 1px black;
+}
+
+#banner1 {
+  background-color: #f4f4f4;
+}
+
+#feedback img {
+  border-radius: 50%;
+}
+
+#feedback2 img {
+  border-radius: 50%;
+}
+
+#feedback3 img {
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #6c1af1;
+}/*# sourceMappingURL=main.css.map */

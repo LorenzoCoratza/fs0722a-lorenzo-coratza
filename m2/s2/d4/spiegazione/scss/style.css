@@ -1,0 +1,88 @@
+.box, .mybox {
+  border: 1px solid #000;
+  background-color: green;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.mybox {
+  font-size: 10px;
+}
+
+/*ESEMPIO 2*/
+.mysecondboxx, .myfirstboxx {
+  border: 2px solid #000;
+  background-color: blue;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.myfirstboxx {
+  font-size: 10px;
+}
+
+.mysecondboxx {
+  font-size: 20px;
+}
+
+/* MIXIN */
+button .red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  outline: 1px solid red;
+  color: white;
+  border: 1px solid white;
+}
+button .red:hover {
+  color: red;
+  background: white;
+  box-shadow: none;
+}
+
+button .green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  outline: 1px solid green;
+  color: white;
+  border: 1px solid white;
+}
+button .green:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+button .blue {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: blue;
+  outline: 1px solid blue;
+  color: white;
+  border: 1px solid white;
+}
+button .blue:hover {
+  color: blue;
+  background: white;
+  box-shadow: none;
+}
+
+button .yellow {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: yellow;
+  outline: 1px solid yellow;
+  color: white;
+  border: 1px solid white;
+}
+button .yellow:hover {
+  color: yellow;
+  background: white;
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

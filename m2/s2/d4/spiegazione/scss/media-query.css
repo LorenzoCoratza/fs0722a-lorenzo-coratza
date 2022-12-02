@@ -1,0 +1,19 @@
+.menu li {
+  padding: 10px;
+}
+@media screen and (max: width 1024px) {
+  .menu li {
+    display: block;
+    text-align: center;
+    background: grey;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menu li {
+    display: inline-block;
+    border-right: 1px solid #000;
+  }
+  .menu li:first-child {
+    border-left: 1px solid #000;
+  }
+}/*# sourceMappingURL=media-query.css.map */

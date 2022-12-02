@@ -1,0 +1,63 @@
+@import'variables';
+@import'hovers';
+
+
+header{
+   background-color:$bg-color;
+   
+   #servizi{
+    color:$hedr-color;
+}
+   
+#contatti{
+    color:$hedr-color;
+}
+
+   
+   svg  {color:$hedr-color;}
+    
+}
+
+
+main{
+    p{font-size: 1.3rem;}
+
+
+#btn1{
+    background-color: $bg-color ;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    &:hover{
+        color: $bg-color;
+        background: white;
+        box-shadow: 0 0 1px black;      
+    }
+    
+}}
+
+#banner1{
+    background-color: #f4f4f4;
+}
+
+#feedback{
+    img{
+    border-radius: 50%;}
+}
+
+#feedback2{
+    img{
+    border-radius: 50%;}
+}
+
+#feedback3{
+    img{
+    border-radius: 50%;}
+}
+
+
+footer{
+    background-color:$bg-color;
+}
+
