@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ereditarietà</title>
+</head>
+<body>
+    <!-- possiamo modificare la struttura degli oggetti anche dopo la creazione-->
+    <script>
+        varMarioRossi = new persona("Mario", "Rossi");
+        varGiuseppeVerdi = new persona("Giuseppe", "Verdi");
+        marioRossi.telefono = "0322349567"  //posso aggiungere all'oggetto qualcosa
+        // creo una nuova proprità a Mario Rossi senza influenzare la struttura di Giuseppe Verdi
+        //quando creo oggetti posso partire da una struttura di dati comune definita da un costruttore
+        //  e poi quando la possiamo personalizzare in base alle nostre esigenze
+        //prototype -> persona.prototype.telefono = "1244355436"
+        // tutti gli oggetti che avevamo creato col costruttore persona() ora hanno anche la proprietà telefono
+        
+        
+        function Student(name, age) {
+            this.name = name ;
+            this.age = age ;
+        }
+        var studente1 = new Student("Luigi Bianchi", 43);
+        var studente2 = new Student("Mario Rossi", 32);
+        console.log(studente1, studente2);
+
+        student.prototype.skills = [];   //skills è accessibile come se fosse una proprità dell'oggetto
+        //prototype ha un riferimento a un altro oggetto
+
+        studente1.skills = ["html", "css", "js"];
+        studente2.skills = ["surfare", "ballare", "suonare"];
+
+        console.log(studente1, studente2);
+
+        /* Eredità prototipale -> prototypal inheritance
+        se una proprietà non si trova in un oggetto la si cerca  nel prototipo
+        il suo prototipo di un oggetto può essere a sua volta un altro prototipo*/
+</script>
+</body>
+</html>
