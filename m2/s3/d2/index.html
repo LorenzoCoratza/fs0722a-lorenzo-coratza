@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*
+        class Person{
+            name = "";
+            age = "";
+            
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            differenzaEtà(n2){
+         
+
+                var diff = this.age - n2.age   
+             
+
+                                  
+                if(diff > 0){
+                    return `${this.name} è più vecchio di ${n2.name}`
+                }
+                else if(diff < 0){
+                    return ` ${this.name} è più giovane di ${n2.name}`
+                }
+                else{
+                    return `${this.name} ha la stessa età di ${n2.name}`
+                }
+            }
+        }
+        const p1 = new Person("Giorgio",20)
+        const p2 = new Person("Giacomo",25)
+        const p3 = new Person("Gianluca",30)
+        console.log(differenzaEtà(p2))*/
+        class Persons{
+        constructor(name1, age1){
+            this.name1 = name1;
+            this.age1 = age1
+        }
+        confrontaEtà(p){
+            if(this.age1 >p.age1){
+                return ${this.name1} è più grande di ${p.name1};
+            }
+            else if(this.age1 < p.age1){
+                return ${p.name1} è più grande di ${this.name1};
+            }
+            else if(this.age1 == p.age1){
+                return ${p.name1} e ${this.name1} hanno la stessa età;
+            }
+        }
+    }
+    var p1 = new Persons ('Paola', 20);
+    var p2 = new Persons ('Chiara', 30);
+    var p3 = new Persons ('Alfredo', 20);
+    console.log(p1, p2, p3);
+    console.log(p1.confrontaEtà(p3))
+    </script>
+</body>
+</html>
