@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        novità HTML
+        -> nnuovi tag audio, video, svg
+        -> nuove api geolocation,web workers, canvas
+        -> web storage -> nasce per risolvere un paio di problemi
+        1. problema dei cookie (4k)
+        2. impossibile storare cookie differenziati tra due diverse sessioni di navigazione
+        per risolvere questi problemi -> webStorage ->
+        1. sessionStorage -> persistenza di dati finchè c'è una finestra di navigazione aperta
+        2. localStorage -> persistenza di dati finchè vengono cancellati (i dati sono in comune a tutte le tab aperte)
+        -> possono ospitare molti più dati dei cookie (5mb)
+
+        //specifiche
+        singola interfaccia Storage -> sessionStorage e localStorage implementano lo stesso set di metodi
+    -->
+    <script>
+        localStorage.nome = 'Federico'; //salvo i dati come in un normale array associativo
+        localStorage.cognome = 'De Ambrosis';
+        localStorage.setItem('nome','Federico');  //o con l'ausilio dei metodi dedicati
+        localStorage.getItem('nome');    //restituisce 'Federico'
+        localStorage.removeItem          //rimuove una key
+        localStorage.clear
+        //come posso inserire oggetti diversi da stringhe?
+        localStorage.ordini = Array("1","2","3");
+        localStorage.ordini; //ritorna "1,2,3"
+        //se ho dati diversi da stringhe devo ricorrere alla serializzazione su json
+        localStorage.ordini = JSON.stringify(Array(1,2,3));
+        JSON.parse(localStorage.ordini);  //ritorna un'array di 3 elementi(1,2,3)
+
+    </script>
+</body>
+</html>
