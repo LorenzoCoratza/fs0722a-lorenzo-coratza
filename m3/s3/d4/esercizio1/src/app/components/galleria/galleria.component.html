@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;" *ngFor="let p of photos">
+  <img src="..." class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">{{photo.id}}</h5>
+
+    <a href="#" class="btn btn-warning" *ngIf="liked;else likeFalse" >Non Mi piace</a>
+<ng-template>
+  <a href="#" class="btn btn-primary" #likeFalse>Mi piace</a>
+</ng-template>
+
+
+    <a href="#" class="btn btn-danger">Elimina</a>
+  </div>
+</div>
