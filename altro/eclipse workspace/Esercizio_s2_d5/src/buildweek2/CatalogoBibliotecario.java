@@ -14,7 +14,8 @@ import org.apache.commons.io.FileUtils;
 public class CatalogoBibliotecario {
 	
 	private String ISBN;
-	   private String titolo;
+	   private String 
+ ;
 	   private int annoPub;
 	   private String numeroPag;
 
