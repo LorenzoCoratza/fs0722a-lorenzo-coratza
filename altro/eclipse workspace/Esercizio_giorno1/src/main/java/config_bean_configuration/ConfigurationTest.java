@@ -14,9 +14,6 @@ public class ConfigurationTest {
 	}
 	
 	@Bean
-	@Scope("prototype")
-	public Test test2(String nome, String cognome) {
-		return new Test(nome, cognome);
-	}
+	@Scope("prototype"  
 
 }
